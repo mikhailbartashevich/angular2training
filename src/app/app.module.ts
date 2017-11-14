@@ -34,6 +34,10 @@ import { XLargeDirective } from './home/x-large';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 
+import { CoursesPageComponent } from './courses';
+import { CoursesFooterComponent } from './courses/components/courses-footer';
+import { CoursesHeaderComponent } from './courses/components/courses-header';
+
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
@@ -52,6 +56,9 @@ type StoreType = {
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [
+    CoursesPageComponent,
+    CoursesHeaderComponent,
+    CoursesFooterComponent, // courses
     AppComponent,
     AboutComponent,
     HomeComponent,
