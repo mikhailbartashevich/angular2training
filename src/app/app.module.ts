@@ -39,6 +39,8 @@ import { CoursesFooterComponent } from './courses/components/courses-footer';
 import { CoursesHeaderComponent } from './courses/components/courses-header';
 import { CourseListComponent } from './courses/components/course-list';
 import { CourseDetailsComponent } from './courses/components/course-details';
+import { CoursesToolbarComponent } from './courses/components/courses-toolbar';
+import { LoginPageComponent } from './login-page';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -62,7 +64,9 @@ type StoreType = {
     CoursesHeaderComponent,
     CoursesFooterComponent,
     CourseDetailsComponent,
-    CourseListComponent, // courses
+    CourseListComponent,
+    CoursesToolbarComponent,
+    LoginPageComponent, // courses
     AppComponent,
     AboutComponent,
     HomeComponent,

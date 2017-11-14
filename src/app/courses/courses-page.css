@@ -1,4 +1,18 @@
 .container {
+  height: 100%;
   margin: 20px;
+  position: relative;
+}
+
+courses-footer {
+  bottom: 20px;
+  margin: 0 auto;
+  position: absolute;
   text-align: center;
+  width: 100%;
+}
+
+courses-header, courses-toolbar, course-list {
+  display: block;
+  margin-bottom: 20px;
 }
