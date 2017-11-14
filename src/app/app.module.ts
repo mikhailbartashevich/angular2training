@@ -37,6 +37,8 @@ import '../styles/headings.css';
 import { CoursesPageComponent } from './courses';
 import { CoursesFooterComponent } from './courses/components/courses-footer';
 import { CoursesHeaderComponent } from './courses/components/courses-header';
+import { CourseListComponent } from './courses/components/course-list';
+import { CourseDetailsComponent } from './courses/components/course-details';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -58,7 +60,9 @@ type StoreType = {
   declarations: [
     CoursesPageComponent,
     CoursesHeaderComponent,
-    CoursesFooterComponent, // courses
+    CoursesFooterComponent,
+    CourseDetailsComponent,
+    CourseListComponent, // courses
     AppComponent,
     AboutComponent,
     HomeComponent,
