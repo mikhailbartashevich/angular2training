@@ -8,4 +8,8 @@ import {CourseDetails} from '../course_details/course_details';
 })
 export class CourseList {
   @Input() public courses: CourseDetails[];
+
+  private onDeleteCourse_(course: CourseDetails) {
+    console.log(course);
+  }
 }

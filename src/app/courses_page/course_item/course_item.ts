@@ -8,13 +8,13 @@ import {CourseDetails} from '../course_details/course_details';
 })
 export class CourseItem implements OnInit {
   @Input() public courseDetails: CourseDetails;
-  @Output() private deleteCourse_: EventEmitter<CourseDetails> = new EventEmitter();
+  @Output() public deleteCourse: EventEmitter<CourseDetails> = new EventEmitter();
 
   public ngOnInit() {
     console.log('hello `Course item` ');
   }
 
   private onDeleteCourseButtonClick_() {
-    this.deleteCourse_.emit(this.courseDetails);
+    this.deleteCourse.emit(this.courseDetails);
   }
 }
