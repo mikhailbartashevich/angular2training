@@ -1,13 +1,13 @@
 <div class="container">
     <div class="content">
         <div class="header">
-            <div class="title">Title</div>
-            <div class="duration">15 min</div>
-            <div class="date">Date</div>
+            <div class="title">{{courseDetails.title}}</div>
+            <div class="duration">{{courseDetails.duration_ms | coursesTimeMsPipe}}</div>
+            <div class="date">{{courseDetails.creation_date_ms | date : 'dd/MM/yyyy'}}</div>
         </div>
 
         <div>
-            Description
+            {{courseDetails.description}}
         </div>
     </div>
 

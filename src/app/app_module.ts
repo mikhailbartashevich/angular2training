@@ -27,6 +27,7 @@ import {CourseList} from './courses_page/course_list';
 import {CourseItem} from './courses_page/course_item';
 import {CoursesToolbox} from './courses_page/courses_toolbox';
 import {LoginPage} from './login_page';
+import {TimeMsPipe} from './pipes/time_pipe';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -52,6 +53,7 @@ type StoreType = {
     LoginPage, // courses
     AppComponent,
     NoContent,
+    TimeMsPipe,
   ],
   /**
    * Import Angular's modules.

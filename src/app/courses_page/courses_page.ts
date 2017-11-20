@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import { AppState } from '../app_service';
+import {CourseDetails} from '../courses_page/course_details/course_details';
 
 @Component({
   selector: 'courses-page',
@@ -8,21 +8,35 @@ import { AppState } from '../app_service';
   templateUrl: './courses_page.ng.html',
 })
 export class CoursesPage implements OnInit {
-  public localState = { value: '' };
+  private courses: CourseDetails[];
 
-  constructor(public appState: AppState) {}
+  constructor() {
+    this.courses = [];
+  }
 
   public ngOnInit() {
-    console.log('hello `Courses Page` ');
-  }
+    this.courses.push({
+      id: 1,
+      title: 'First course',
+      description: 'First description',
+      duration_ms: 100000,
+      creation_date_ms: 1511188015987,
+    });
 
-  public submitState(value: string) {
-    console.log('submitState', value);
-    this.appState.set('value', value);
-    this.localState.value = '';
-  }
+    this.courses.push({
+      id: 2,
+      title: 'Second course',
+      description: 'Second description',
+      duration_ms: 110000,
+      creation_date_ms: 1511188015987,
+    });
 
-  private onInput_(value: string) {
-    this.localState.value = value;
+    this.courses.push({
+      id: 3,
+      title: 'Third course',
+      description: 'Third description',
+      duration_ms: 120000,
+      creation_date_ms: 1511188015987,
+    });
   }
 }

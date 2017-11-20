@@ -1,6 +1,5 @@
-import {Component, OnInit, EventEmitter} from '@angular/core';
-import {Input, Output} from '@angular/core/src/metadata/directives';
-import {CourseDetails} from './course_details';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {CourseDetails} from '../course_details/course_details';
 
 @Component({
   selector: 'course-item',
@@ -8,10 +7,14 @@ import {CourseDetails} from './course_details';
   templateUrl: './course_item.ng.html'
 })
 export class CourseItem implements OnInit {
-  @Input() courseDetails: CourseDetails;
-  @Output() deleteCourse: EventEmitter<CourseDetails> = new EventEmitter();
+  @Input() public courseDetails: CourseDetails;
+  @Output() private deleteCourse_: EventEmitter<CourseDetails> = new EventEmitter();
+
+  public ngOnInit() {
+    console.log('hello `Course item` ');
+  }
 
   private onDeleteCourseButtonClick_() {
-    this.deleteCourse.emit(this.courseDetails);
+    this.deleteCourse_.emit(this.courseDetails);
   }
 }

@@ -1,14 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {CourseDetails} from '../course_details/course_details';
 
 @Component({
   selector: 'course-list',
   styleUrls: ['./course_list.css'],
   templateUrl: './course_list.ng.html'
 })
-export class CourseList implements OnInit {
-  public localState = { value: '' };
-
-  public ngOnInit() {
-    console.log('hello `Course list` ');
-  }
+export class CourseList {
+  @Input() public courses: CourseDetails[];
 }
