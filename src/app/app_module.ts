@@ -20,13 +20,13 @@ import {NoContent} from './no_content';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 
-import {CoursesPage} from './courses_page';
-import {CoursesFooter} from './courses_page/courses_footer';
-import {CoursesHeader} from './courses_page/courses_header';
-import {CourseList} from './courses_page/course_list';
-import {CourseItem} from './courses_page/course_item';
-import {CoursesToolbox} from './courses_page/courses_toolbox';
-import {LoginPage} from './login_page';
+import {CoursesPageComponent} from './courses_page_component';
+import {CoursesFooterComponent} from './courses_page_component/courses_footer_component';
+import {CoursesHeaderComponent} from './courses_page_component/courses_header_component';
+import {CourseListComponent} from './courses_page_component/course_list_component';
+import {CourseItemComponent} from './courses_page_component/course_item_component';
+import {CoursesToolboxComponent} from './courses_page_component/courses_toolbox_component';
+import {LoginPageComponent} from './login_page_component';
 import {TimeMsPipe} from './pipes/time_pipe';
 
 // Application wide providers
@@ -44,13 +44,13 @@ type StoreType = {
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [
-    CoursesPage,
-    CoursesHeader,
-    CoursesFooter,
-    CourseItem,
-    CourseList,
-    CoursesToolbox,
-    LoginPage, // courses
+    CoursesPageComponent,
+    CoursesHeaderComponent,
+    CoursesFooterComponent,
+    CourseItemComponent,
+    CourseListComponent,
+    CoursesToolboxComponent,
+    LoginPageComponent, // courses
     AppComponent,
     NoContent,
     TimeMsPipe,
