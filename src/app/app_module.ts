@@ -24,7 +24,7 @@ import {CoursesPage} from './courses_page';
 import {CoursesFooter} from './courses_page/courses_footer';
 import {CoursesHeader} from './courses_page/courses_header';
 import {CourseList} from './courses_page/course_list';
-import {CourseDetails} from './courses_page/course_details';
+import {CourseItem} from './courses_page/course_item';
 import {CoursesToolbox} from './courses_page/courses_toolbox';
 import {LoginPage} from './login_page';
 
@@ -40,16 +40,13 @@ type StoreType = {
   disposeOldHosts: () => void
 };
 
-/**
- * `AppModule` is the main entry point into Angular2's bootstraping process
- */
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [
     CoursesPage,
     CoursesHeader,
     CoursesFooter,
-    CourseDetails,
+    CourseItem,
     CourseList,
     CoursesToolbox,
     LoginPage, // courses

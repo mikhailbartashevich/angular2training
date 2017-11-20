@@ -6,9 +6,9 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './courses_toolbox.ng.html'
 })
 export class CoursesToolbox implements OnInit {
-  public localState = { value: '' };
+  private searchField_: string;
 
-  public ngOnInit() {
-    console.log('hello `Courses Toolbar` ');
+  private onFindButtonClick_() {
+    console.log(this.searchField_);
   }
 }
