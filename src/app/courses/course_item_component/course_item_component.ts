@@ -1,6 +1,9 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {CourseDetails} from '../course_details_model';
 
+import './course_item_component.css';
+import './course_item_component.ng.html';
+
 @Component({
   selector: 'course-item',
   styleUrls: ['./course_item_component.css'],

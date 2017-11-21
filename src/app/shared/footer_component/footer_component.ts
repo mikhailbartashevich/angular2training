@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 
+import './footer_component.css';
+import './footer_component.ng.html';
+
 @Component({
   selector: 'shared-footer',
   styleUrls: ['./footer_component.css'],

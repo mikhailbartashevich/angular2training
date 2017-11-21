@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 
 import {CourseDetails} from './course_details_model';
 
+import './courses_page_component.css';
+import './courses_page_component.ng.html';
+
 @Component({
   selector: 'courses-page',
   styleUrls: ['./courses_page_component.css'],
