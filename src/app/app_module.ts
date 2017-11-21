@@ -15,15 +15,13 @@ import {ROUTES} from './app_routes';
 import {AppComponent} from './app_component';
 import {APP_RESOLVER_PROVIDERS} from './app_resolver';
 import {AppState, InternalStateType} from './app_service';
-import {NoContent} from './no_content';
-
-import '../styles/styles.scss';
-import '../styles/headings.css';
-
 
 import {LoginPageComponent} from './login/login_page_component';
 import {CoreModule} from './core/core_module';
 import {CoursesModule} from './courses/courses_module';
+
+import '../styles/styles.scss';
+import '../styles/headings.css';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -39,16 +37,10 @@ type StoreType = {
 
 @NgModule({
   bootstrap: [AppComponent],
-  declarations: [
-    LoginPageComponent, // courses
-    AppComponent,
-    NoContent,
-  ],
-  /**
-   * Import Angular's modules.
-   */
+  declarations: [LoginPageComponent, AppComponent],
+
   imports: [
-    CoreModule,
+    CoreModule, //TODO: core module?
     CoursesModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -59,9 +51,7 @@ type StoreType = {
       preloadingStrategy: PreloadAllModules
     })
   ],
-  /**
-   * Expose our Services and Providers into Angular's dependency injection.
-   */
+
   providers: [
     ENV_PROVIDERS,
     APP_PROVIDERS

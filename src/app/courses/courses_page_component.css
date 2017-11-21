@@ -2,7 +2,7 @@
   padding: 20px;
 }
 
-courses-footer {
+shared-footer {
   bottom: 20px;
   margin: 0 auto;
   position: absolute;
@@ -10,7 +10,7 @@ courses-footer {
   width: 100%;
 }
 
-courses-header, courses-toolbox, course-list {
+shared-header, courses-toolbox, course-list {
   display: block;
   margin-bottom: 20px;
 }

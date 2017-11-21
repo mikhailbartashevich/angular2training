@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import {CourseDetails} from '../courses_page_component/shared/course_details_model';
+import {CourseDetails} from './course_details_model';
 
 @Component({
   selector: 'courses-page',
