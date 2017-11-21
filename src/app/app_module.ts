@@ -20,14 +20,10 @@ import {NoContent} from './no_content';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 
-import {CoursesPageComponent} from './courses_page_component';
-import {CoursesFooterComponent} from './courses_page_component/courses_footer_component';
-import {CoursesHeaderComponent} from './courses_page_component/courses_header_component';
-import {CourseListComponent} from './courses_page_component/course_list_component';
-import {CourseItemComponent} from './courses_page_component/course_item_component';
-import {CoursesToolboxComponent} from './courses_page_component/courses_toolbox_component';
-import {LoginPageComponent} from './login_page_component';
-import {TimeMsPipe} from './pipes/time_pipe';
+
+import {LoginPageComponent} from './login/login_page_component';
+import {CoreModule} from './core/core_module';
+import {CoursesModule} from './courses/courses_module';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -42,23 +38,18 @@ type StoreType = {
 };
 
 @NgModule({
-  bootstrap: [ AppComponent ],
+  bootstrap: [AppComponent],
   declarations: [
-    CoursesPageComponent,
-    CoursesHeaderComponent,
-    CoursesFooterComponent,
-    CourseItemComponent,
-    CourseListComponent,
-    CoursesToolboxComponent,
     LoginPageComponent, // courses
     AppComponent,
     NoContent,
-    TimeMsPipe,
   ],
   /**
    * Import Angular's modules.
    */
   imports: [
+    CoreModule,
+    CoursesModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
