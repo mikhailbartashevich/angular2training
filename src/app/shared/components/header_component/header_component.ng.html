@@ -5,10 +5,10 @@
         </div>
         <div class="title">Courses</div>
     </div>
-    <div>
-        <div>user login</div>
+    <div *ngIf="user">
+        <div>{{user.login}}</div>
         <div>
-            <a href="/">logoff</a>
+            <a href="/" (click)="onLogoffClick_()">logoff</a>
         </div>
     </div>
 </div>

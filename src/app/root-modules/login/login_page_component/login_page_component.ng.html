@@ -1,5 +1,19 @@
 <div class="container">
   <shared-header></shared-header>
-  <div>Login Page</div>
+  <div class="login-form">
+    <div>
+      <label for="login">Login</label>
+      <input id="login" type="text" [(ngModel)]="user.login"/>
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" [(ngModel)]="user.password"/>
+    </div>
+
+    <div>
+      <input type="button" value="Enter" (click)="onEnterButtonClick_()"/>
+    </div>
+  </div>
   <shared-footer></shared-footer>
 </div>
