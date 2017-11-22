@@ -16,7 +16,7 @@ import {AppComponent} from './app_component';
 import {APP_RESOLVER_PROVIDERS} from './app_resolver';
 import {AppState, InternalStateType} from './app_service';
 
-import {LoginPageComponent} from './login/login_page_component';
+import {LoginPageComponent} from './login_page_component/login_page_component';
 import {CoursesModule} from './courses/courses_module';
 
 import '../styles/styles.scss';
