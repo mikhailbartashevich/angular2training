@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 
+import './login_page_component.css';
+import './login_page_component.ng.html';
+
 @Component({
   selector: 'login-page',
   styleUrls: ['./login_page_component.css'],
