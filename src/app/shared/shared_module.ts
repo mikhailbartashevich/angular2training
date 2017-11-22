@@ -1,13 +1,19 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
-import {FooterComponent} from './footer_component/footer_component';
-import {HeaderComponent} from './header_component/header_component';
+import * as components from './components';
+import * as pipes from './pipes';
+
+function toArray(obj) {
+  return Object.keys(obj).map((key) => obj[key]);
+}
+
+const declarations = [...toArray(components), ...toArray(pipes)];
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [FooterComponent, HeaderComponent],
+  declarations: [...declarations],
   providers: [],
-  exports: [FooterComponent, HeaderComponent]
+  exports: [...declarations]
 })
 export class SharedModule {}

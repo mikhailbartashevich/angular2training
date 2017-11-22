@@ -3,22 +3,21 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 
 import {SharedModule} from '../shared/shared_module';
-import {CoreModule} from '../core/core_module';
 
-import {CoursesPageComponent} from './courses_page_component';
-import {CourseListComponent} from './course_list_component/course_list_component';
-import {CourseItemComponent} from './course_item_component/course_item_component';
-import {CoursesToolboxComponent} from './courses_toolbox_component/courses_toolbox_component';
+import * as components from './components';
+import * as services from './services';
+
+function toArray(obj) {
+  return Object.keys(obj).map((key) => obj[key]);
+}
+
+const declarations = [...toArray(components)];
+const providers = [...toArray(services)];
 
 @NgModule({
-  imports: [FormsModule, CoreModule, CommonModule, SharedModule],
-  declarations: [
-    CoursesPageComponent,
-    CourseListComponent,
-    CourseItemComponent,
-    CoursesToolboxComponent
-  ],
-  providers: [],
-  exports: [CoursesPageComponent]
+  imports: [FormsModule, CommonModule, SharedModule],
+  declarations: [...declarations],
+  providers: [...providers],
+  exports: [...declarations]
 })
 export class CoursesModule {}

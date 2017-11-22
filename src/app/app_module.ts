@@ -17,7 +17,6 @@ import {APP_RESOLVER_PROVIDERS} from './app_resolver';
 import {AppState, InternalStateType} from './app_service';
 
 import {LoginPageComponent} from './login/login_page_component';
-import {CoreModule} from './core/core_module';
 import {CoursesModule} from './courses/courses_module';
 
 import '../styles/styles.scss';
@@ -40,7 +39,6 @@ type StoreType = {
   declarations: [LoginPageComponent, AppComponent],
 
   imports: [
-    CoreModule, //TODO: core module?
     CoursesModule,
     BrowserModule,
     BrowserAnimationsModule,
