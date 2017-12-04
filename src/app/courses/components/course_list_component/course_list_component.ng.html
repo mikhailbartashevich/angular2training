@@ -1,6 +1,6 @@
 <div class="container">
     <course-item 
-        *ngFor="let item of courses" 
+        *ngFor="let item of courses; trackBy: trackByCourseId" 
         [courseDetails]="item" 
-        (deleteCourse)="onDeleteCourse_($event)"></course-item>
+        (deleteCourse)="onDeleteCourse($event)"></course-item>
 </div>

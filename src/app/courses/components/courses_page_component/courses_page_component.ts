@@ -3,9 +3,6 @@ import {Component, OnInit} from '@angular/core';
 import {CourseDetails} from '../../course_details_model';
 import {CoursesService} from '../../services';
 
-import './courses_page_component.css';
-import './courses_page_component.ng.html';
-
 @Component({
   selector: 'courses-page',
   styleUrls: ['./courses_page_component.css'],
@@ -20,7 +17,7 @@ export class CoursesPageComponent implements OnInit {
     this.courses = this.coursesService.getList();
   }
 
-  private onDeleteCourse_(course: CourseDetails) {
+  public onDeleteCourse(course: CourseDetails) {
     this.courses = this.coursesService.removeCourse(course);
   }
 }

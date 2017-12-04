@@ -2,7 +2,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app',
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.Native,//Emulated?
   styleUrls: ['./app_component.css'],
   templateUrl: 'app_component.ng.html'
 })
